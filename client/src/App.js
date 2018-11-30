@@ -56,7 +56,7 @@ handleLogin = async (e) =>{
     console.log('Signing user in')
     console.log(this.state);
     try{
-      const loggedUser = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/login`,
+      const loggedUser = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/api/v1/auth/login`,
       {
         method: 'POST',
         body: JSON.stringify(this.state),
