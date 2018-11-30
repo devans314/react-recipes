@@ -35,6 +35,7 @@ handleRegistration = async (e) =>{
       body: JSON.stringify(this.state),
       headers: {'Content-Type': 'application/json'}
     });
+    
   const parsedResponse = await newUser.json();
   console.log(parsedResponse, ' response from server')
   if (parsedResponse.status == 200){
