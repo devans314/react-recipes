@@ -62,7 +62,8 @@ handleLogin = async (e) =>{
       {
         method: 'POST',
         body: JSON.stringify(this.state),
-        headers: {'Content-Type': 'application/json'}
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include'
       });
   const parsedResponse = await loggedUser.json();
   console.log(parsedResponse, ' response from server')
