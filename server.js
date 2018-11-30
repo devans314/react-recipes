@@ -29,7 +29,7 @@ app.use(cors(corsOptions));
 
 
 const store = new MongoDBStore({
-  uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
+  uri: 'mongodb://localhost:27017/connect_mongodb_session_test' || "mongodb://heroku_dbr6711m:54g82a25dfndp3gp7fsltt4qkf@ds047075.mlab.com:47075/heroku_dbr6711m",
   collection: 'mySessions'
 });
 
