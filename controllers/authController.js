@@ -14,7 +14,7 @@ router.post('/register', async (req, res)=> {
         const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(12));
         console.log(passwordHash)
         newUser.password = passwordHash
-        newUser.save;
+        await newUser.save();
         req.session.username = req.body.username;
         req.session.password = req.body.password;
         req.session.logged = true;
